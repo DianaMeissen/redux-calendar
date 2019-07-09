@@ -1,0 +1,18 @@
+.head {
+    display: inline-block;
+    text-align: center;
+}
+
+.first-day {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.last-day {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.day {
+    border-bottom: 1px solid black;
+}
