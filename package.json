@@ -1,6 +1,6 @@
 {
   "homepage": "https://DianaMeissen.github.io/redux-calendar",
-  "name": "react_dynamic-list-of-posts",
+  "name": "Calendar",
   "version": "0.1.0",
   "private": true,
   "keywords": [],
@@ -10,7 +10,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-md-spinner": "^1.0.0",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4"
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
