@@ -1,17 +1,24 @@
 import React from 'react';
 
-const CalendarHead = () => {
+import dateFns from "date-fns";
+import '../head/Head.css'
+import '../main.css'
+
+const CalendarHead = ({ currentMonth }) => {
+    const dateFormat = "dddd";
+    const daysOfWeek = [];
+
+    for (let i = 0; i < 7; i++) {
+        daysOfWeek.push(
+            <div className="col col-center" key={i}>
+                {dateFns.format(dateFns.addDays(dateFns.startOfWeek(currentMonth), i), dateFormat)}
+            </div>
+        );
+    }
+
     return (
-        <div className="head">
-            <div className="first-day">Monday</div>
-            <div className="day">Tuesday</div>
-            <div className="day">Wednesday</div>
-            <div className="day">Thursday</div>
-            <div className="day">Friday</div>
-            <div className="day">Saturday</div>
-            <div className="last-day">Sunday</div>
-        </div>
-    )
+        <div className="days row">{daysOfWeek}</div>
+    );
 }
 
 export default CalendarHead;
