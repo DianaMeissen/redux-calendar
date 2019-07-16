@@ -5,13 +5,12 @@ import '../head/Head.css'
 import '../main.css'
 
 const CalendarHead = ({ currentMonth }) => {
-    const dateFormat = "dddd";
     const daysOfWeek = [];
 
     for (let i = 0; i < 7; i++) {
         daysOfWeek.push(
             <div className="col col-center" key={i}>
-                {dateFns.format(dateFns.addDays(dateFns.startOfWeek(currentMonth), i), dateFormat)}
+                {dateFns.format(dateFns.addDays(dateFns.startOfWeek(currentMonth), i), "dddd")}
             </div>
         );
     }

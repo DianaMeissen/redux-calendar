@@ -6,20 +6,20 @@ import '../header/Header.css'
 import '../main.css'
 
 const Header = ({ prevMonth, nextMonth, currentMonth}) => {
-    const dateFormat = "MMMM YYYY";
-
     return (
     <div className="header row">
-        <div className="col col-start" onClick={prevMonth}>
-            <i className="fa fa-chevron-left"></i>
+        <div className="col col-start">
+            <div className="left icon">
+                <i className="fa fa-chevron-left" onClick={prevMonth}></i>
+            </div>
         </div>
         <div className="col col-center">
-            <span>
-               {dateFns.format(currentMonth, dateFormat)} 
-            </span>
+           {dateFns.format(currentMonth, "MMMM YYYY")} 
         </div>
-        <div className="col col-end" onClick={nextMonth}>
-            <i className="fa fa-chevron-right"></i>
+        <div className="col col-end">
+            <div className="right icon">
+                <i className="fa fa-chevron-right" onClick={nextMonth}></i>
+            </div>
         </div>
     </div>);
 }

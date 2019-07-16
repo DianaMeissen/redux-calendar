@@ -7,6 +7,7 @@ import App from './mainApp/App';
 
 ReactDOM.render(
     <Provider store={store}>
+        {console.log(store.getState())}
         <App todayDate={store.todayDate} />
     </Provider>,
     document.getElementById('root')
